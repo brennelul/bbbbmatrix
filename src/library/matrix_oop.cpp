@@ -274,6 +274,16 @@ Matrix &Matrix::operator=(const Matrix &a) {
   return *this;
 }
 
+Matrix &Matrix::operator=(Matrix &&other) {
+  if (other.rows_ <= 0 || other.cols_ <= 0) {
+    throw std::out_of_range("rows or cols less or equal zero");
+  }
+  std::swap(rows_, other.rows_);
+  std::swap(cols_, other.cols_);
+  std::swap(matrix_, other.matrix_);
+  return *this;
+}
+
 Matrix &Matrix::operator+=(const Matrix &a) {
   this->SumMatrix(a);
   return *this;

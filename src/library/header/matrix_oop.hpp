@@ -31,6 +31,7 @@ class Matrix {
   Matrix operator*(const double &a) const;
   bool operator==(const Matrix &a) const;
   Matrix &operator=(const Matrix &a);
+  Matrix &operator=(Matrix &&other);
   Matrix &operator+=(const Matrix &a);
   Matrix &operator-=(const Matrix &a);
   Matrix &operator*=(const Matrix &a);
