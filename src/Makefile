@@ -22,7 +22,7 @@ check:
 ifeq ("", $(shell which g++))
 	$(error "Please install g++")
 endif
-test: style_check check matrix_oop.a
+test: check matrix_oop.a
 	g++ $(FLAGS) tests/tests.cpp matrix_oop.a -o test.out $(LIBCHECK)
 	./test.out
 gcov_report: check
@@ -38,7 +38,7 @@ endif
 	@rm -f *.o
 	$(HTML_OPEN)
 matrix_oop.a: check
-	g++ $(FLAGS) $(LIBCHECK) -c -o matrix_oop.o library/matrix_oop.cpp 
+	g++ $(FLAGS) -c -o matrix_oop.o library/matrix_oop.cpp 
 	ar rcs matrix_oop.a matrix_oop.o
 	@rm -f *.o
 clean:
