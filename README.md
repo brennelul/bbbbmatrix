@@ -1,6 +1,6 @@
 ## bbbbmatrix
 
-Implementation of matrix class in C++
+Implementation of matrix class in C++.
 
 Tested on Linux and macOS.
 
