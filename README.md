@@ -14,7 +14,7 @@ To build the lib run make
 make
 ```
 
-If you want to run tests, you'll need GTest installed
+If you want to run tests, please install GTest
 
 #### Ubuntu/Debian
 ```bash
